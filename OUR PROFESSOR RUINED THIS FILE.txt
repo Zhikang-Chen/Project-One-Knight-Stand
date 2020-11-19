@@ -1,5 +1,0 @@
-Test
-
-Wqeq
-
-cout << "Good bye world"

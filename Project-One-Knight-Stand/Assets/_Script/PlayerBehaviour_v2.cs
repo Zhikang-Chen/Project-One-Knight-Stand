@@ -8,6 +8,7 @@ public class PlayerBehaviour_v2 : MonoBehaviour
     private SpriteRenderer sr;
     private float movementSpeed = 10f;
     private float jumpSpeed = 10f;
+    private bool falling = false;
     //private int health = 5;
 
     void Start()
@@ -15,6 +16,15 @@ public class PlayerBehaviour_v2 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Do something
+        //if (collision.gameObject.CompareTag("Ground"))
+        falling = false;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -37,8 +47,12 @@ public class PlayerBehaviour_v2 : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
-        if(Input.GetButtonDown("Jump"))
+
+        //print(rb.velocity[1]);
+
+        if(!falling && Input.GetButtonDown("Jump"))
         {
+            falling = true;
             rb.AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
         }
 

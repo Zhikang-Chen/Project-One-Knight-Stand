@@ -12,7 +12,8 @@ public class ResetPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Do something
-        Player.transform.position = new Vector3(0, 0, 0);
+        if(collision.gameObject.CompareTag("Player"))
+            Player.transform.position = new Vector3(0, 0, 0);
     }
 
     private void Update()

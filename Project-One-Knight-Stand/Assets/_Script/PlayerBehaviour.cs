@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private SpriteRenderer sr;
+    //private Rigidbody2D rb;
+    //private SpriteRenderer sr;
     private float movementSpeed = 10f;
     private float jumpSpeed = 15f;
     //private int health = 5;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
-    }
+    //void Start()
+    //{
+    //    rb = GetComponent<Rigidbody2D>();
+    //    sr = GetComponent<SpriteRenderer>();
+    //}
 
     // Update is called once per frame
     void Update()

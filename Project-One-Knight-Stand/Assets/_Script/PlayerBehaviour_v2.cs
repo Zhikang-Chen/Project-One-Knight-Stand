@@ -8,7 +8,7 @@ public class PlayerBehaviour_v2 : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private float movementSpeed = 10f;
-    private float jumpSpeed = 10f;
+    private float jumpSpeed = 15f;
     private bool falling = false;
     //private int health = 5;
 
